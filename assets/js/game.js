@@ -2,9 +2,10 @@
 var playerName = window.prompt("What is your rebot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
+var playerMoney = 10;
 
 // You can also log multiple values at once like this
-console.log("Player Stats: " + "Name-" + playerName, "Attack-" + playerAttack, "Health-" + playerHealth);
+console.log("Player Stats: " + "Name-" + playerName, "Attack-" + playerAttack, "Health-" + playerHealth, "Money-" + playerMoney);
 
 // Enemy initial setup
 var enemyName = "Roborto";
@@ -49,7 +50,19 @@ var fight = function() {
         }
     }
     else if (promptFight.toLowerCase() === "skip") {
-        window.alert(playerName + " has chosen to skip the fight!");
+        // confim player wants to skip
+        var confirmSkip = window.confirm("Are you sure you'd like to skip?")
+
+        //if yes (true), leave fight
+        if (confirmSkip) {
+            window.alert(playerName + " has decided to skip this fight. Goodbye!");
+            
+            // subtract money from playerMoney for skipping
+            playerMoney = playerMoney - 2;
+        }
+        else {
+            fight()
+        }
     }
     else {
         window.alert("You need to choose a valid option. Try again!");
