@@ -4,17 +4,27 @@ var playerHealth = 100;
 var playerAttack = 10;
 var playerMoney = 10;
 
-// You can also log multiple values at once like this
-// console.log("Player Stats: " + "Name-" + playerName, "Attack-" + playerAttack, "Health-" + playerHealth, "Money-" + playerMoney);
-
 // Enemy initial setup
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-// console.log("Player Stats: " + "Name-" + enemyName, "Attack-" + enemyAttack, "Health-" + enemyHealth);
+// create startGame function
+var startGame = function() {
 
-// create function
+}
+
+// create endGame function
+var endGame = function() {
+
+}
+
+// create shop function
+var shop = function() {
+    
+}
+
+// create fight function
 var fight = function(enemyName) {
     while (playerHealth > 0 && enemyHealth > 0) {
       // ask player if they'd liked to fight or skip
